@@ -1,0 +1,11 @@
+name: GitHub Actions Task
+on:
+  push:
+  workflow_dispatch:
+jobs:
+  example-job:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: chmod +x display_my_name.sh
+      - run: ./display_my_name.sh
